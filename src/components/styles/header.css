@@ -1,0 +1,22 @@
+.header{
+    text-align: center;
+
+    margin-top: 50px;
+}
+
+.brackets{
+    color: red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+}
+
+.Slogan{
+    color: red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Title{
+    font-family:'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+}

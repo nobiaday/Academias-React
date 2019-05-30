@@ -1,24 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios'; 
+import Header from './Header';
+import ContentPost from './ContentPost';
+
 
 function App() {
+
+  const[ Post, setPost] = useState ( [] );
+  const[ Filter, setFilter] = useState ('all');
+
+useEffect( () => {
+  axios.get('https://private-c3edb-postsmock.apiary-mock.com/posts').
+  then( response => setPost( response.data ))
+}, []);
+
+function NewPost ( newData ) {
+  setPost([...Post, newData]);
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <ContentPost />
     </div>
   );
 }
