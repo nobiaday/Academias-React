@@ -9,16 +9,20 @@ import '../src/components/styles/contentpost.css';
 
 function ContentPost ( props ){
 
+    const [ Modal, setModal ] = useState(false);
+
+    const openModalForm = ( ) => setModal(true);
+    const closeModalForm = ( ) => setModal(false);
     return (
         <div>
-            <Fab color="secondary" aria-label="Edit" className="icon-fab">
+            <Fab color="secondary" aria-label="Edit" className="icon-fab" onClick = { openModalForm }>
                 <Icon className="icon">edit_icon</Icon>
                 </Fab>
-            <Filters />
+            <Filters currentFilter = {props.currentFilter} handlerFilter = {props.handlerFilter} />
             <Grid direction="row" container>
-            <Cards />
+            <Cards posts = { props.posts } handleDelPost = { props.handleDelPost } />
             </Grid>
-            <ModalForm />
+            <ModalForm OpenModal = { Modal } CloseModal = { closeModalForm } handlePostNew = { props.handlePostNew } />
         </div>
     );
 }

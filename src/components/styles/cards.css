@@ -1,0 +1,32 @@
+.card{
+    text-align: left;
+    height: 400px;
+}
+
+.ttl{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.content-crd{
+    margin-top: -220px;
+    color: white;
+}
+
+.btn{
+    float: right;
+}
+
+.action{
+    float: right;
+}
+
+.media{
+    height: 400px;
+    
+}
+
+.md-dv:hover{
+    filter: brightness(0.8);
+}

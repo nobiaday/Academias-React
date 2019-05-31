@@ -1,0 +1,25 @@
+.Modal{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.Form{
+    background-color: white;
+    border-radius: 11px 11px 11px 11px;
+    -moz-border-radius: 11px 11px 11px 11px;
+    -webkit-border-radius: 11px 11px 11px 11px;
+    border: 2px solid #3f3f3f;
+    margin-top: 50px;
+}
+
+.Post-Create{
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.cont {
+    width: 75%;
+}
+

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import axios from 'axios'; 
 import Header from './Header';
@@ -20,10 +19,21 @@ function NewPost ( newData ) {
   setPost([...Post, newData]);
 }
 
+function DelPost ( postId ){
+  setPost( Post.filter( (post) => post.id !== postId ) );
+}
+
   return (
     <div className="App">
       <Header />
-      <ContentPost />
+      <ContentPost posts={Post.filter( post => {
+        if (Filter === 'all') return true;
+        else return post.category === Filter;
+      })}
+      handlePostNew = { NewPost } 
+      handleFilter = { setFilter }
+      handleDelPost = { DelPost }
+      currentFilter = { Filter } />
     </div>
   );
 }
